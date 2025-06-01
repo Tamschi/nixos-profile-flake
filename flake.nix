@@ -22,6 +22,7 @@
           floorp
           keepassxc
           syncthing
+          rustup
         ];
       };
     };
