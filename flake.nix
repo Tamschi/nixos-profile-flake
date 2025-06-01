@@ -22,6 +22,8 @@
 
               services.syncthing.enable = true;
               services.syncthing.tray = true;
+
+              system.stateVersion = "24.05";
             }
           ];
         };
