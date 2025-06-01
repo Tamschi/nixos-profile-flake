@@ -4,24 +4,17 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
   outputs = { self, nixpkgs }: {
-    overlays = [
-      (final: prev: {
-        myPackages = with final; [
-          vscode
-          discord
-          zulip
-          syncthingtray
-          florp
-          keepassxc
-        ];
-      })
-    ];
+    overlays = [];
 
     packages = {
-      myPackages = import nixpkgs {
-        system = "x86_64-linux";
-        overlays = self.overlays;
-      }.myPackages;
+      x86_64-linux.myPackages = with import nixpkgs { system = "x86_64-linux"; }; [
+        vscode
+        discord
+        zulip
+        syncthingtray
+        florp
+        keepassxc
+      ];
     };
   };
 }
