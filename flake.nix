@@ -19,7 +19,7 @@
           discord
           zulip
           syncthingtray
-          florp
+          floorp
           keepassxc
         ];
       };
