@@ -38,6 +38,7 @@
           vlc
           qbittorrent
           element-desktop
+          flameshot
         ];
       };
     };
