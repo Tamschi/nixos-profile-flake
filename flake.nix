@@ -16,5 +16,12 @@
         ];
       })
     ];
+
+    packages = {
+      myPackages = import nixpkgs {
+        system = "x86_64-linux";
+        overlays = self.overlays;
+      }.myPackages;
+    };
   };
 }
