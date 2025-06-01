@@ -21,6 +21,7 @@
           syncthingtray
           floorp
           keepassxc
+          syncthing
         ];
       };
     };
