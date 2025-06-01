@@ -23,6 +23,21 @@
           keepassxc
           syncthing
           rustup
+          htop
+          btop
+          neofetch
+          ripgrep
+          bat
+          fd
+          starship
+          zoxide
+          kitty
+          obsidian
+          gimp
+          inkscape
+          vlc
+          qbittorrent
+          element-desktop
         ];
       };
     };
