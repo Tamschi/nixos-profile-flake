@@ -5,27 +5,26 @@
 
   outputs = { self, nixpkgs }: {
     nixosConfigurations = {
-      my-profile = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          let
-            pkgs = import nixpkgs { system = "x86_64-linux"; };
-          in
-          {
-            environment.systemPackages = with pkgs; [
-              vscode
-              discord
-              zulip
-              syncthingtray
-              florp
-              keepassxc
-            ];
+      my-profile = let
+          pkgs = import nixpkgs { system = "x86_64-linux"; };
+        in nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            {
+              environment.systemPackages = with pkgs; [
+                vscode
+                discord
+                zulip
+                syncthingtray
+                florp
+                keepassxc
+              ];
 
-            services.syncthing.enable = true;
-            services.syncthing.tray = true;
-          }
-        ];
-      };
+              services.syncthing.enable = true;
+              services.syncthing.tray = true;
+            }
+          ];
+        };
     };
   };
 }
