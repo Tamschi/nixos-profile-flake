@@ -7,14 +7,19 @@
     overlays = [];
 
     packages = {
-      x86_64-linux.myPackages = with import nixpkgs { system = "x86_64-linux"; }; [
-        vscode
-        discord
-        zulip
-        syncthingtray
-        florp
-        keepassxc
-      ];
+      x86_64-linux.myPackages = import nixpkgs {
+        system = "x86_64-linux";
+      }.buildEnv {
+        name = "my-packages";
+        paths = with import nixpkgs { system = "x86_64-linux"; }; [
+          vscode
+          discord
+          zulip
+          syncthingtray
+          florp
+          keepassxc
+        ];
+      };
     };
   };
 }
