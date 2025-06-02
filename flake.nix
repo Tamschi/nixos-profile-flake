@@ -47,6 +47,8 @@
           gdb
           gcc
         ];
+        pathsToLink = [ "/bin" "/share" ];
+        ignoreCollisions = true;
       };
     };
   };
