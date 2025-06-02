@@ -39,6 +39,13 @@
           qbittorrent
           element-desktop
           flameshot
+          clang
+          clang-tools
+          lldb
+          lld
+          cmake
+          gdb
+          gcc
         ];
       };
     };
