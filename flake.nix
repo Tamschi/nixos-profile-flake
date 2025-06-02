@@ -46,6 +46,7 @@
           cmake
           gdb
           gcc
+          mold
         ];
         pathsToLink = [ "/bin" "/share" ];
         ignoreCollisions = true;
