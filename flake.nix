@@ -47,6 +47,10 @@
           gdb
           gcc
           mold
+          android-studio
+          android-tools
+          jdk17
+          gradle
         ];
         pathsToLink = [ "/bin" "/share" ];
         ignoreCollisions = true;
