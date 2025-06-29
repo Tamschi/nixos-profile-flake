@@ -17,6 +17,7 @@
         paths = with pkgs; [
           vscode
           discord
+          direnv
           zulip
           syncthingtray
           floorp
