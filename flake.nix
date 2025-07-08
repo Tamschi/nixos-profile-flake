@@ -52,6 +52,7 @@
           android-tools
           jdk17
           gradle
+          remmina
         ];
         pathsToLink = [ "/bin" "/share" ];
         ignoreCollisions = true;
